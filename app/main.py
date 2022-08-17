@@ -30,11 +30,15 @@ async def prediction(image:UploadFile = File(...)):
     file_dir = "Test"
     img_name = "input.jpg"
     os.makedirs(file_dir,exist_ok=True)
-    with open(os.path.join(file_dir,img_name),"wb") as buffer:
-        shutil.copyfileobj(image.file, buffer)
-        image = cv2.imread(os.path.join(file_dir,img_name))
-        resized_image = tf.image.resize(image,(256,256))
-        yhat = model.predict(np.expand_dims(resized_image/255,0))
+    try:
+        with open(os.path.join(file_dir,img_name),"wb") as buffer:
+            shutil.copyfileobj(image.file, buffer)
+            image = cv2.imread(os.path.join(file_dir,img_name))
+            resized_image = tf.image.resize(image,(256,256))
+            yhat = model.predict(np.expand_dims(resized_image/255,0))
+    except Exception as e:
+        return e
+        logging.error(e)
     if yhat < 0.5:
         result =  "puppy is feeling happy"
     else:
