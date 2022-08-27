@@ -114,3 +114,4 @@ wincertstore==0.2
 wrapt @ file:///C:/Windows/Temp/abs_7c3dd407-1390-477a-b542-fd15df6a24085_diwiza/croots/recipe/wrapt_1657814452175/work
 yarl @ file:///C:/ci/yarl_1606940076464/work
 zipp @ file:///C:/ci/zipp_1652274073489/work
+gunicorn
