@@ -37,8 +37,8 @@ async def prediction(image:UploadFile = File(...)):
             resized_image = tf.image.resize(image,(256,256))
             yhat = model.predict(np.expand_dims(resized_image/255,0))
     except Exception as e:
-        return e
         logging.error(e)
+        return e
     if yhat < 0.5:
         result =  "puppy is feeling happy"
     else:
@@ -56,4 +56,4 @@ def image_filter():
 
 
 if  __name__ == '__main__':
-    uvicorn.run(app)
+    uvicorn.run(app,host="127.0.0.1",port=8000)
