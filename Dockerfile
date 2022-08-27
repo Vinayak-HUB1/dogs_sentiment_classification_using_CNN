@@ -1,17 +1,12 @@
-# 
-FROM python:3.9
+FROM python:3.6.5
 
-# 
-WORKDIR /code
+COPY . /src
 
-# 
-COPY ./requirements.txt /code/requirements.txt
+WORKDIR /src
 
-# 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN pip install --upgrade pip
 
-# 
-COPY ./app /code/app
+RUN pip install -r requirements.txt
 
-# 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn","app.main:app","--host=0.0.0.0","--reload"]
+
