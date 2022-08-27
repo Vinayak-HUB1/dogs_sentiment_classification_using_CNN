@@ -20,7 +20,7 @@ logging.basicConfig(filename=os.path.join(LOG_DIR, "app.log"),    level=logging.
 
 app = FastAPI(title="dog mood detection")
 
-model = load_model("app\model.h5")
+model = load_model("model.h5")
 
 @app.get("/")
 def home():
