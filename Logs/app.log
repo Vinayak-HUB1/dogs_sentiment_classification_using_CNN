@@ -4,3 +4,10 @@
 [2022-08-17 10:54:44,503: INFO: server]: >>>>>>>>>  Started server process [6576]
 [2022-08-17 10:54:44,504: INFO: on]: >>>>>>>>>  Waiting for application startup.
 [2022-08-17 10:54:44,504: INFO: on]: >>>>>>>>>  Application startup complete.
+[2022-08-17 12:15:18,119: INFO: server]: >>>>>>>>>  Started server process [4780]
+[2022-08-17 12:15:18,120: INFO: on]: >>>>>>>>>  Waiting for application startup.
+[2022-08-17 12:15:18,121: INFO: on]: >>>>>>>>>  Application startup complete.
+[2022-08-17 12:19:16,468: INFO: server]: >>>>>>>>>  Shutting down
+[2022-08-17 17:59:17,427: INFO: server]: >>>>>>>>>  Started server process [17452]
+[2022-08-17 17:59:17,428: INFO: on]: >>>>>>>>>  Waiting for application startup.
+[2022-08-17 17:59:17,429: INFO: on]: >>>>>>>>>  Application startup complete.
